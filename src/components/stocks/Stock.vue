@@ -36,7 +36,7 @@
 		props : ['stock'],
 		data() {
 			return {
-				quantity : 0, 
+				quantity : 1, 
 			}
 		},
 		methods : {
@@ -47,6 +47,7 @@
 					quantity : this.quantity,
 				}
 				console.log(order);
+				this.$store.dispatch('buyStock', order); 
 				this.quantity = 0;
 			}
 		}
