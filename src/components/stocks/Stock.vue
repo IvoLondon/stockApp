@@ -22,7 +22,7 @@
 					<button
 						class="btn btn-success"
 						@click="buyStock"
-						:disabled = "quantity <= 0 || !Number.isInteger(quantity)"
+						:disabled = "quantity <= 0"
 					>
 						Buy
 					</button>
@@ -36,7 +36,7 @@
 		props : ['stock'],
 		data() {
 			return {
-				quantity : 1, 
+				quantity : 0, 
 			}
 		},
 		methods : {
@@ -50,6 +50,6 @@
 				this.$store.dispatch('buyStock', order); 
 				this.quantity = 0;
 			}
-		}
+		},
 	}
 </script>

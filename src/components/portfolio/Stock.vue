@@ -15,14 +15,14 @@
 						type="number"
 						class="form-control"
 						placeholder="Quantity"
-						v-model="quantity" 
+						v-model="Quantity" 
 					/>
 				</div>
 				<div class="pull-right">
 					<button
 						class="btn btn-success"
 						@click="sellStock"
-						:disabled = "quantity <= 0 || !Number.isInteger(quantity)">
+						:disabled = "quantity <= 0">
 						Sell
 					</button>
 				</div>
@@ -36,7 +36,7 @@
 		props : ['stock'],
 		data() {
 			return {
-				quantity : 1, 
+				quantity : 0, 
 			}
 		},
 		methods : {
