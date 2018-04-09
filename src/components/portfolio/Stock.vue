@@ -63,7 +63,6 @@
 					stockPrice : this.stock.price,
 					quantity : this.quantity,
 				}
-				console.log(order);
 				this.placeSellOrder(order);
 				this.quantity = 0;
 			}	
